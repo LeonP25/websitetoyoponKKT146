@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Resmi Desa Toyopon</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'hijau-tua': '#166534', /* Emerald 800 */
+                        'hijau-gelap': '#14532d', /* Emerald 900 */
+                        'coklat-terang': '#d4a373', /* Earthy light brown */
+                        'coklat-muda': '#fef3c7', /* Amber 100 for very light backgrounds */
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fef3c7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4a373;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #166534;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-coklat-muda antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-hijau-tua text-white fixed w-full z-50 shadow-lg border-b-4 border-coklat-terang">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i class="fa-solid fa-leaf text-coklat-terang text-2xl mr-2"></i>
+                    <span class="font-bold text-xl tracking-wider">DESA TOYOPON</span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#beranda" class="hover:text-coklat-terang transition duration-300">Beranda</a>
+                    <a href="#logo" class="hover:text-coklat-terang transition duration-300">Logo</a>
+                    <a href="#tim" class="hover:text-coklat-terang transition duration-300">Tim KKT</a>
+                    <a href="#video" class="hover:text-coklat-terang transition duration-300">Video</a>
+                    <a href="#sejarah" class="hover:text-coklat-terang transition duration-300">Sejarah</a>
+                    <a href="#demografi" class="hover:text-coklat-terang transition duration-300">Demografi</a>
+                    <a href="#pemerintahan" class="hover:text-coklat-terang transition duration-300">Pemerintahan</a>
+                    <a href="#galeri" class="hover:text-coklat-terang transition duration-300">Galeri</a>
+                    <a href="#kontak" class="hover:text-coklat-terang transition duration-300">Kontak</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white hover:text-coklat-terang focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-hijau-gelap pb-4 px-4 shadow-inner">
+            <a href="#beranda" class="block py-2 text-white hover:text-coklat-terang">Beranda</a>
+            <a href="#logo" class="block py-2 text-white hover:text-coklat-terang">Logo</a>
+            <a href="#tim" class="block py-2 text-white hover:text-coklat-terang">Tim KKT</a>
+            <a href="#video" class="block py-2 text-white hover:text-coklat-terang">Video</a>
+            <a href="#sejarah" class="block py-2 text-white hover:text-coklat-terang">Sejarah</a>
+            <a href="#demografi" class="block py-2 text-white hover:text-coklat-terang">Demografi</a>
+            <a href="#pemerintahan" class="block py-2 text-white hover:text-coklat-terang">Pemerintahan</a>
+            <a href="#galeri" class="block py-2 text-white hover:text-coklat-terang">Galeri</a>
+            <a href="#kontak" class="block py-2 text-white hover:text-coklat-terang">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative pt-16 min-h-[90vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://i.ibb.co.com/tNL1vq7/Whats-App-Image-2026-03-17-at-00-16-02.jpg');">
+        <div class="absolute inset-0 bg-hijau-gelap bg-opacity-70"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <span class="inline-block py-1 px-3 rounded-full bg-coklat-terang text-hijau-gelap font-semibold text-sm mb-4 shadow-lg">Website Resmi</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">Selamat Datang di <span class="text-coklat-terang">Desa Toyopon</span></h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 drop-shadow-md">Bersama membangun desa yang mandiri, berbudaya, dan sejahtera untuk masa depan yang lebih baik.</p>
+            <a href="#logo" class="inline-block bg-coklat-terang text-hijau-gelap hover:bg-white font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300 transform hover:-translate-y-1 mb-10">
+                Jelajahi Desa <i class="fa-solid fa-arrow-down ml-2"></i>
+            </a>
+            
+            <!-- Find Us On -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 animate-fade-in-up">
+                <span class="text-gray-200 font-medium tracking-wide drop-shadow-md">Find us on :</span>
+                <div class="flex space-x-4">
+                    <!-- Link Instagram -->
+                    <a href="https://www.instagram.com/kkt146_toyopon?igsh=bmc4d2N2YzEyb3Rt" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-hijau-tua bg-opacity-80 rounded-full flex items-center justify-center text-white hover:bg-coklat-terang hover:text-hijau-gelap transition duration-300 border border-hijau-gelap shadow-lg">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <!-- Link TikTok -->
+                    <a href="https://www.tiktok.com/@kkt146.poskotoyop?_r=1&_t=ZS-94akUnhCwpL" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-hijau-tua bg-opacity-80 rounded-full flex items-center justify-center text-white hover:bg-coklat-terang hover:text-hijau-gelap transition duration-300 border border-hijau-gelap shadow-lg">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Kami Section -->
+    <section id="logo" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-hijau-tua mb-4">Logo Kami</h2>
+                <div class="w-24 h-1 bg-coklat-terang mx-auto rounded"></div>
+                <p class="mt-4 text-gray-600"></p>
+            </div>
+            
+            <div class="flex flex-col items-center justify-center">
+                <!-- Template / Placeholder Logo -->
+                <div class="w-48 h-48 md:w-64 md:h-64 bg-coklat-muda rounded-full border-8 border-hijau-tua shadow-2xl flex items-center justify-center mb-8 p-4 transition-transform duration-500 hover:scale-105">
+                    <!-- Ganti link src di bawah ini dengan link gambar logo transparan (.png) asli desa Anda -->
+                    <img src="https://i.ibb.co.com/SD5knQhL/c16021f7-3466-4791-a039-baee744330bd-removalai-preview.png" alt="Logo Desa Toyopon" class="w-full h-full object-cover rounded-full">
+                </div>
+                
+                <!-- Deskripsi Filosofi Logo (Opsional) -->
+                <div class="max-w-3xl text-gray-600 text-justify md:text-center space-y-4">
+                    <p></p>
+                    <p class="italic text-sm text-gray-500">Ini blh ganti dngn filosofi ttg tu logo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tim KKT Section -->
+    <section id="tim" class="pb-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-hijau-tua mb-4">Tim KKT-146</h2>
+                <div class="w-24 h-1 bg-coklat-terang mx-auto rounded"></div>
+                <p class="mt-4 text-gray-600">Struktur organisasi mahasiswa KKT-146 Posko Desa Toyopon.</p>
+            </div>
+
+            <!-- Bagan Struktur -->
+            <div class="flex flex-col items-center space-y-8">
+                
+                <!-- Baris 1: Korpos -->
+                <div class="flex justify-center w-full relative z-10">
+                    <div class="bg-coklat-muda p-5 rounded-2xl shadow-md border-b-4 border-hijau-tua text-center w-64 transition transform hover:-translate-y-1">
+                        <!-- Ganti src gambar dengan foto Korpos -->
+                        <img src="https://i.ibb.co.com/nMdZ5k6f/3fbaff35-6b5e-435c-865d-35ab9ac1f0e5-removalai-preview.png" alt="Korpos" class="w-24 h-24 rounded-full mx-auto mb-3 border-4 border-hijau-tua object-cover">
+                        <h4 class="font-bold text-md text-hijau-tua">Leonardus Paat</h4>
+                        <p class="text-sm text-gray-600 mt-1 font-semibold">Koordinator Posko</p>
+                    </div>
+                </div>
+
+                <!-- Baris 2: Sekretaris & Bendahara -->
+                <div class="flex flex-wrap justify-center gap-6 w-full relative z-10">
+                    <div class="bg-white p-5 rounded-2xl shadow-md border-b-4 border-coklat-terang text-center w-48 transition transform hover:-translate-y-1">
+                        <!-- Ganti src gambar dengan foto Sekretaris -->
+                        <img src="https://i.ibb.co.com/h1FwjF2B/IMG-0004-removebg-preview.png" alt="Sekretaris" class="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-hijau-tua object-cover">
+                        <h4 class="font-bold text-sm text-hijau-tua">Michiko Angeli</h4>
+                        <p class="text-xs text-gray-500 mt-1 font-medium">Sekretaris</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl shadow-md border-b-4 border-coklat-terang text-center w-48 transition transform hover:-translate-y-1">
+                        <!-- Ganti src gambar dengan foto Bendahara -->
+                        <img src="https://i.ibb.co.com/b5LBt9BR/0547a596-a3b1-46f3-97b3-0a1bf091f6ac-removalai-preview.png" alt="Bendahara" class="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-hijau-tua object-cover">
+                        <h4 class="font-bold text-sm text-hijau-tua">Kevin Frans</h4>
+                        <p class="text-xs text-gray-500 mt-1 font-medium">Bendahara</p>
+                    </div>
+                </div>
+
+                <!-- Baris 3: Divisi Pelaporan (1 Koor + 2 Anggota) -->
+                <div class="w-full max-w-4xl mt-6 mb-2 text-center">
+                    <div class="w-full border-t border-gray-300 relative">
+                        <span class="bg-white px-4 text-sm font-semibold text-gray-400 absolute left-1/2 transform -translate-x-1/2 -top-3">Divisi Pelaporan</span>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 w-full relative z-10 pt-4">
+                    <div class="bg-white p-5 rounded-2xl shadow-md border-b-4 border-hijau-tua text-center w-48 transition transform hover:-translate-y-1">
+                        <img src="https://i.ibb.co.com/rKNLcmvf/5f28d242-6cc1-4993-8bc3-263c88823d9f-removalai-preview-1.png" alt="Koor Pelaporan" class="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-coklat-terang object-cover">
+                        <h4 class="font-bold text-sm text-hijau-tua">Mikha Mogot</h4>
+                        <p class="text-xs text-gray-500 mt-1">Koordinator Pelaporan</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl shadow-md border-b-4 border-coklat-terang text-center w-48 transition transform hover:-translate-y-1">
+                        <img src="https://i.ibb.co.com/MxZL3jGr/bc4de0ea-6814-4152-9cac-4b6cbd2cdfcb-removalai-preview.png" alt="Anggota Pelaporan" class="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-hijau-tua object-cover">
+                        <h4 class="font-bold text-sm text-hijau-tua">Marianti Chindy</h4>
+                        <p class="text-xs text-gray-500 mt-1">Anggota Pelaporan</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl shadow-md border-b-4 border-coklat-terang text-center w-48 transition transform hover:-translate-y-1">
+                        <img src="https://i.ibb.co.com/KcZZ1CtM/IMG-20260318-123835.png" alt="Anggota Pelaporan" class="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-hijau-tua object-cover">
+                        <h4 class="font-bold text-sm text-hijau-tua">Ridel Gosal</h4>
+                        <p class="text-xs text-gray-500 mt-1">Anggota Pelaporan</p>
+                    </div>
+                </div>
+
+                <!-- Baris 4: Divisi Program (1 Koor + 1 Anggota) -->
+                <div class="w-full max-w-4xl mt-6 mb-2 text-center">
+                    <div class="w-full border-t border-gray-300 relative">
+                        <span class="bg-white px-4 text-sm font-semibold text-gray-400 absolute left-1/2 transform -translate-x-1/2 -top-3">Divisi Program</span>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 w-full relative z-10 pt-4">
+                    <div class="bg-white p-5 rounded-2xl shadow-md border-b-4 border-hijau-tua text-center w-48 transition transform hover:-translate-y-1">
+                        <img src="https://i.ibb.co.com/C5HbTZXg/196944dd-800a-422c-aa39-7a6161ea7db6-removalai-preview.png" alt="Koor Program" class="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-coklat-terang object-cover">
+                        <h4 class="font-bold text-sm text-hijau-tua">Elgian Lijud</h4>
+                        <p class="text-xs text-gray-500 mt-1">Koordinator Program</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl shadow-md border-b-4 border-coklat-terang text-center w-48 transition transform hover:-translate-y-1">
+                        <img src="https://i.ibb.co.com/jkDt7QDp/b09fe3f4-0239-4ec9-bc5d-4a974a3a6676-removalai-preview.png" alt="Anggota Program" class="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-hijau-tua object-cover">
+                        <h4 class="font-bold text-sm text-hijau-tua">Injilia Lomboan</h4>
+                        <p class="text-xs text-gray-500 mt-1">Anggota Program</p>
+                    </div>
+                </div>
+
+                <!-- Baris 5: Divisi PDD (1 Koor + 1 Anggota) -->
+                <div class="w-full max-w-4xl mt-6 mb-2 text-center">
+                    <div class="w-full border-t border-gray-300 relative">
+                        <span class="bg-white px-4 text-sm font-semibold text-gray-400 absolute left-1/2 transform -translate-x-1/2 -top-3">Divisi PDD</span>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 w-full relative z-10 pt-4">
+                    <div class="bg-white p-5 rounded-2xl shadow-md border-b-4 border-hijau-tua text-center w-48 transition transform hover:-translate-y-1">
+                        <img src="https://i.ibb.co.com/kgQd7nNr/497d9fb7-cb7d-453c-aef7-08bc92c53d5b-removalai-preview.png" alt="Koor PDD" class="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-coklat-terang object-cover">
+                        <h4 class="font-bold text-sm text-hijau-tua">Salomo Roti</h4>
+                        <p class="text-xs text-gray-500 mt-1">Koordinator PDD</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl shadow-md border-b-4 border-coklat-terang text-center w-48 transition transform hover:-translate-y-1">
+                        <img src="https://i.ibb.co.com/LhJvwJV9/311ff109-98d7-4d28-9fa3-ec5645131828-removalai-preview.png" alt="Anggota PDD" class="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-hijau-tua object-cover">
+                        <h4 class="font-bold text-sm text-hijau-tua">Melsy Pananginan</h4>
+                        <p class="text-xs text-gray-500 mt-1">Anggota PDD</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Pengenalan Section -->
+    <section id="video" class="py-20 bg-coklat-muda">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-hijau-tua mb-4">Video Pengenalan Desa</h2>
+                <div class="w-24 h-1 bg-coklat-terang mx-auto rounded"></div>
+                <p class="mt-4 text-gray-600">Saksikan keindahan alam dan keseharian masyarakat di Desa Toyopon.</p>
+            </div>
+            
+            <!-- YouTube Video Layout -->
+            <div class="relative w-full overflow-hidden rounded-2xl shadow-2xl border-4 border-white bg-hijau-gelap aspect-video flex items-center justify-center group cursor-pointer">
+                <!-- Placeholder if iframe is not ready. Replace iframe src with actual youtube link -->
+                <iframe class="absolute top-0 left-0 w-full h-full z-10" 
+                    src="https://www.youtube.com/embed/Rve8gPXQbwU?si=dxhAX3UV6Vy_MfdJ" title="YouTube video player" 
+                    title="Video Pengenalan Desa Toyopon" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sejarah Section -->
+    <section id="sejarah" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl border-l-8 border-coklat-terang">
+                        <img src="https://i.ibb.co.com/KvDDyQT/Whats-App-Image-2026-03-17-at-14-54-23.jpg" alt="Sejarah Desa" class="w-full h-auto object-cover hover:scale-105 transition duration-500">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-hijau-tua mb-4">Sejarah Desa Toyopon</h2>
+                    <div class="w-16 h-1 bg-coklat-terang mb-6"></div>
+                    <div class="prose text-gray-600 space-y-4 text-justify">
+                        <p>Desa Toyopon mulai berkembang sejak tahun 1940-an ketika para perintis (Tonaas) dari Karimbow, Malola, dan Raanan Baru membuka hutan dan membangun pemukiman. Nama “Toyopon” berasal dari bahasa Tontemboan, yaitu toyo yang berarti sedikit dan pon yang berarti kekayaan alam. Secara filosofis, nama ini mencerminkan kerendahan hati masyarakat, meskipun pada kenyataannya desa ini memiliki kekayaan sumber daya alam yang melimpah.</p>
+                        <p>Pada awalnya, kepemimpinan desa bersifat adat dan dijalankan oleh para Tonaas hingga tahun 1949. Setelah itu, mulai diterapkan sistem pemerintahan formal dengan Hukum Tua pertama, yaitu Yulius Rambi, yang kemudian dilanjutkan oleh Cornelius Rindorindo. Hingga saat ini, Desa Toyopon telah dipimpin oleh sekitar 17 Hukum Tua.</p>
+                        <p>Sebagian besar masyarakat Desa Toyopon bekerja sebagai petani, dengan komoditas utama seperti cengkih, kelapa, kakao, dan pala. Kehidupan sosial masyarakat sangat dipengaruhi oleh budaya Mapalus atau gotong royong yang masih terjaga hingga sekarang. Dari segi pendidikan, masyarakat mengalami perkembangan yang cukup baik, ditandai dengan meningkatnya kesadaran akan pentingnya pendidikan.</p>
+                        <p>Desa Toyopon juga memiliki potensi besar di sektor pertanian dan pariwisata. Beberapa potensi wisata alam yang dimiliki antara lain air terjun, goa alam, sumber air panas, serta Gunung Kadera yang memiliki potensi geowisata. Selain itu, terdapat indikasi potensi sumber daya tambang di wilayah desa.</p>
+                        <p>Dalam perjalanan sejarahnya, Desa Toyopon pernah mengalami peristiwa penting seperti konflik Permesta pada tahun 1950-an yang menyebabkan masyarakat mengungsi, serta bencana longsor besar pada tahun 2000 yang berdampak pada permukiman dan akses desa.</p>
+                        <p>Ke depan, masyarakat Desa Toyopon berharap adanya pengembangan potensi pariwisata, peningkatan infrastruktur, serta dukungan terhadap kesejahteraan petani, dengan tetap menjaga dan melestarikan budaya lokal sebagai identitas desa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wilayah Demografi Section -->
+    <section id="demografi" class="py-20 bg-hijau-tua text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-coklat-terang mb-4">Wilayah & Demografi</h2>
+                <div class="w-24 h-1 bg-white mx-auto rounded"></div>
+                <p class="mt-4 text-gray-200">Data statistik kependudukan dan luas wilayah Desa Toyopon.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <!-- Card 1 -->
+                <div class="bg-hijau-gelap p-8 rounded-xl border border-coklat-terang hover:-translate-y-2 transition duration-300 shadow-lg">
+                    <i class="fa-solid fa-map text-4xl text-coklat-terang mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Luas Wilayah</h3>
+                    <p class="text-3xl font-bold text-white">3.600 <span class="text-lg font-normal text-gray-300">Ha</span></p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-hijau-gelap p-8 rounded-xl border border-coklat-terang hover:-translate-y-2 transition duration-300 shadow-lg">
+                    <i class="fa-solid fa-users text-4xl text-coklat-terang mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Total Penduduk</h3>
+                    <p class="text-3xl font-bold text-white">873 <span class="text-lg font-normal text-gray-300">Jiwa</span></p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-hijau-gelap p-8 rounded-xl border border-coklat-terang hover:-translate-y-2 transition duration-300 shadow-lg">
+                    <i class="fa-solid fa-male text-4xl text-coklat-terang mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Laki-laki</h3>
+                    <p class="text-3xl font-bold text-white">477 <span class="text-lg font-normal text-gray-300">Jiwa</span></p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-hijau-gelap p-8 rounded-xl border border-coklat-terang hover:-translate-y-2 transition duration-300 shadow-lg">
+                    <i class="fa-solid fa-female text-4xl text-coklat-terang mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Perempuan</h3>
+                    <p class="text-3xl font-bold text-white">397 <span class="text-lg font-normal text-gray-300">Jiwa</span></p>
+                </div>
+                <!-- Card 5 (Kecamatan) -->
+                <div class="bg-hijau-gelap p-8 rounded-xl border border-coklat-terang hover:-translate-y-2 transition duration-300 shadow-lg">
+                    <i class="fa-solid fa-map-location-dot text-4xl text-coklat-terang mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Kecamatan</h3>
+                    <p class="text-2xl font-bold text-white">Motoling Barat</p>
+                </div>
+                <!-- Card 6 (Kabupaten) -->
+                <div class="bg-hijau-gelap p-8 rounded-xl border border-coklat-terang hover:-translate-y-2 transition duration-300 shadow-lg">
+                    <i class="fa-solid fa-city text-4xl text-coklat-terang mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Kabupaten</h3>
+                    <p class="text-xl lg:text-2xl font-bold text-white">Minahasa Selatan</p>
+                </div>
+                <!-- Card 7 (Kode Pos) -->
+                <div class="bg-hijau-gelap p-8 rounded-xl border border-coklat-terang hover:-translate-y-2 transition duration-300 shadow-lg">
+                    <i class="fa-solid fa-envelopes-bulk text-4xl text-coklat-terang mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Kode Pos</h3>
+                    <p class="text-3xl font-bold text-white">95956</p>
+                </div>
+                <!-- Card 8 (Kode Wilayah) -->
+                <div class="bg-hijau-gelap p-8 rounded-xl border border-coklat-terang hover:-translate-y-2 transition duration-300 shadow-lg">
+                    <i class="fa-solid fa-hashtag text-4xl text-coklat-terang mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Kode Wilayah</h3>
+                    <!-- Ganti dengan kode wilayah desa yang sebenarnya -->
+                    <p class="text-2xl font-bold text-white">710521</p>
+                </div>
+            </div>
+
+            <!-- Distribusi Penduduk Per Jaga -->
+            <div class="mt-20">
+                <div class="text-center mb-10">
+                    <h3 class="text-2xl font-bold text-coklat-terang mb-3">Distribusi Penduduk Per Jaga</h3>
+                    <div class="w-16 h-1 bg-white mx-auto rounded"></div>
+                    <p class="mt-4 text-gray-300">Rincian sebaran penduduk di 6 wilayah Jaga Desa Toyopon.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Jaga 1 -->
+                    <div class="bg-hijau-gelap p-6 rounded-xl border-l-4 border-coklat-terang shadow-md hover:bg-hijau-tua transition duration-300">
+                        <h4 class="text-lg font-bold text-white mb-4 pb-2 border-b border-gray-600 flex items-center justify-between">
+                            Jaga 1 <i class="fa-solid fa-map-pin text-coklat-terang text-sm"></i>
+                        </h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300"><i class="fa-solid fa-male text-coklat-terang mr-2 w-4"></i>Laki-laki</span>
+                                <span class="font-bold text-white">102</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300"><i class="fa-solid fa-female text-coklat-terang mr-2 w-4"></i>Perempuan</span>
+                                <span class="font-bold text-white">81</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jaga 2 -->
+                    <div class="bg-hijau-gelap p-6 rounded-xl border-l-4 border-coklat-terang shadow-md hover:bg-hijau-tua transition duration-300">
+                        <h4 class="text-lg font-bold text-white mb-4 pb-2 border-b border-gray-600 flex items-center justify-between">
+                            Jaga 2 <i class="fa-solid fa-map-pin text-coklat-terang text-sm"></i>
+                        </h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300"><i class="fa-solid fa-male text-coklat-terang mr-2 w-4"></i>Laki-laki</span>
+                                <span class="font-bold text-white">64</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300"><i class="fa-solid fa-female text-coklat-terang mr-2 w-4"></i>Perempuan</span>
+                                <span class="font-bold text-white">60</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jaga 3 -->
+                    <div class="bg-hijau-gelap p-6 rounded-xl border-l-4 border-coklat-terang shadow-md hover:bg-hijau-tua transition duration-300">
+                        <h4 class="text-lg font-bold text-white mb-4 pb-2 border-b border-gray-600 flex items-center justify-between">
+                            Jaga 3 <i class="fa-solid fa-map-pin text-coklat-terang text-sm"></i>
+                        </h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300"><i class="fa-solid fa-male text-coklat-terang mr-2 w-4"></i>Laki-laki</span>
+                                <span class="font-bold text-white">65</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300"><i class="fa-solid fa-female text-coklat-terang mr-2 w-4"></i>Perempuan</span>
+                                <span class="font-bold text-white">59</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jaga 4 -->
+                    <div class="bg-hijau-gelap p-6 rounded-xl border-l-4 border-coklat-terang shadow-md hover:bg-hijau-tua transition duration-300">
+                        <h4 class="text-lg font-bold text-white mb-4 pb-2 border-b border-gray-600 flex items-center justify-between">
+                            Jaga 4 <i class="fa-solid fa-map-pin text-coklat-terang text-sm"></i>
+                        </h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300"><i class="fa-solid fa-male text-coklat-terang mr-2 w-4"></i>Laki-laki</span>
+                                <span class="font-bold text-white">66</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300"><i class="fa-solid fa-female text-coklat-terang mr-2 w-4"></i>Perempuan</span>
+                                <span class="font-bold text-white">50</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jaga 5 -->
+                    <div class="bg-hijau-gelap p-6 rounded-xl border-l-4 border-coklat-terang shadow-md hover:bg-hijau-tua transition duration-300">
+                        <h4 class="text-lg font-bold text-white mb-4 pb-2 border-b border-gray-600 flex items-center justify-between">
+                            Jaga 5 <i class="fa-solid fa-map-pin text-coklat-terang text-sm"></i>
+                        </h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300"><i class="fa-solid fa-male text-coklat-terang mr-2 w-4"></i>Laki-laki</span>
+                                <span class="font-bold text-white">89</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300"><i class="fa-solid fa-female text-coklat-terang mr-2 w-4"></i>Perempuan</span>
+                                <span class="font-bold text-white">65</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jaga 6 -->
+                    <div class="bg-hijau-gelap p-6 rounded-xl border-l-4 border-coklat-terang shadow-md hover:bg-hijau-tua transition duration-300">
+                        <h4 class="text-lg font-bold text-white mb-4 pb-2 border-b border-gray-600 flex items-center justify-between">
+                            Jaga 6 <i class="fa-solid fa-map-pin text-coklat-terang text-sm"></i>
+                        </h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300"><i class="fa-solid fa-male text-coklat-terang mr-2 w-4"></i>Laki-laki</span>
+                                <span class="font-bold text-white">91</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300"><i class="fa-solid fa-female text-coklat-terang mr-2 w-4"></i>Perempuan</span>
+                                <span class="font-bold text-white">82</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Struktur Desa & Riwayat Hukum Tua -->
+    <section id="pemerintahan" class="py-20 bg-coklat-muda">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Struktur Desa -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-hijau-tua mb-4">Struktur Pemerintahan Desa</h2>
+                    <div class="w-24 h-1 bg-coklat-terang mx-auto rounded"></div>
+                    <p class="mt-4 text-gray-600">Jajaran aparat pemerintah yang melayani masyarakat Desa Toyopon.</p>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <!-- Hukum Tua -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-hijau-tua text-center w-64 md:w-72 mb-6 relative z-10 transition duration-300 hover:-translate-y-1">
+                        <img src="https://i.ibb.co.com/Xxx4138W/IMG-20260319-174703.jpg" alt="Hukum Tua" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-coklat-terang object-cover shadow-sm">
+                        <h4 class="font-bold text-lg text-hijau-tua">Wenny Tumuju</h4>
+                        <p class="text-sm text-gray-500 font-semibold mt-1">Hukum Tua</p>
+                    </div>
+
+                    <!-- Garis Penghubung -->
+                    <div class="w-1 h-8 bg-hijau-tua rounded"></div>
+
+                    <!-- Sekretaris Desa -->
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-b-4 border-coklat-terang text-center w-64 md:w-72 mt-6 mb-10 relative z-10 transition duration-300 hover:-translate-y-1">
+                        <img src="https://i.ibb.co.com/93pkqv6t/Gemini-Generated-Image-hlkhl6hlkhl6hlkh.png" alt="Sekretaris Desa" class="w-20 h-20 rounded-full mx-auto mb-3 border-4 border-hijau-tua object-cover shadow-sm">
+                        <h4 class="font-bold text-md text-hijau-tua">Victor Sembung</h4>
+                        <p class="text-sm text-gray-500 font-semibold mt-1">Sekretaris Desa</p>
+                    </div>
+
+                    <!-- Batas Kepala Seksi (Kasi) -->
+                    <div class="w-full max-w-4xl mt-2 mb-8 text-center relative">
+                        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                            <div class="w-full border-t-2 border-coklat-terang/50"></div>
+                        </div>
+                        <div class="relative flex justify-center">
+                            <span class="bg-coklat-muda px-4 text-xl font-bold text-hijau-tua">Kepala Seksi (Kasi)</span>
+                        </div>
+                    </div>
+
+                    <!-- Grid Kasi -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-4xl">
+                        <!-- Kasi Pemerintahan -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border-b-4 border-coklat-terang text-center flex flex-col items-center transition duration-300 hover:-translate-y-1">
+                            <img src="https://i.ibb.co.com/p6PZpqgT/Whats-App-Image-2026-03-18-at-11-50-57.jpg" alt="Kasi Pemerintahan" class="w-16 h-16 rounded-full mb-3 border-2 border-hijau-tua object-cover">
+                            <h4 class="font-bold text-sm text-hijau-tua">Jance Ompi</h4>
+                            <p class="text-xs text-gray-500 mt-1">Kasi Pemerintahan</p>
+                        </div>
+                        <!-- Kasi Kesejahteraan -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border-b-4 border-coklat-terang text-center flex flex-col items-center transition duration-300 hover:-translate-y-1">
+                            <img src="https://i.ibb.co.com/zK7jvtM/Whats-App-Image-2026-03-18-at-11-50-58.jpg" alt="Kasi Kesejahteraan" class="w-16 h-16 rounded-full mb-3 border-2 border-hijau-tua object-cover">
+                            <h4 class="font-bold text-sm text-hijau-tua">Regina Karuh</h4>
+                            <p class="text-xs text-gray-500 mt-1">Kasi Kesejahteraan</p>
+                        </div>
+                        <!-- Kasi Pelayanan -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border-b-4 border-coklat-terang text-center flex flex-col items-center transition duration-300 hover:-translate-y-1">
+                            <img src="https://i.ibb.co.com/DHZps3VC/IMG-20260319-WA0027.jpg " alt="Kasi Pelayanan" class="w-16 h-16 rounded-full mb-3 border-2 border-hijau-tua object-cover">
+                            <h4 class="font-bold text-sm text-hijau-tua">Haryati Rondonuwu</h4>
+                            <p class="text-xs text-gray-500 mt-1">Kasi Pelayanan</p>
+                        </div>
+                    </div>
+
+                    <!-- Batas Kepala Urusan (Kaur) -->
+                    <div class="w-full max-w-4xl mt-10 mb-8 text-center relative">
+                        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                            <div class="w-full border-t-2 border-coklat-terang/50"></div>
+                        </div>
+                        <div class="relative flex justify-center">
+                            <span class="bg-coklat-muda px-4 text-xl font-bold text-hijau-tua">Kepala Urusan (Kaur)</span>
+                        </div>
+                    </div>
+
+                    <!-- Grid Kaur -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-4xl mb-2">
+                        <!-- Kaur TU & Umum -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border-b-4 border-coklat-terang text-center flex flex-col items-center transition duration-300 hover:-translate-y-1">
+                            <img src="https://i.ibb.co.com/CszG3sVH/Whats-App-Image-2026-03-18-at-11-55-29.jpg" alt="Kaur TU & Umum" class="w-16 h-16 rounded-full mb-3 border-2 border-hijau-tua object-cover">
+                            <h4 class="font-bold text-sm text-hijau-tua">Silvana Karuh</h4>
+                            <p class="text-xs text-gray-500 mt-1">Kaur TU & Umum</p>
+                        </div>
+                        <!-- Kaur Keuangan -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border-b-4 border-coklat-terang text-center flex flex-col items-center transition duration-300 hover:-translate-y-1">
+                            <img src="https://i.ibb.co.com/zhDL3wKD/IMG-20260322-153223.jpg" alt="Kaur Keuangan" class="w-16 h-16 rounded-full mb-3 border-2 border-hijau-tua object-cover">
+                            <h4 class="font-bold text-sm text-hijau-tua">Jetty Rambi</h4>
+                            <p class="text-xs text-gray-500 mt-1">Kaur Keuangan</p>
+                        </div>
+                        <!-- Kaur Perencanaan -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border-b-4 border-coklat-terang text-center flex flex-col items-center transition duration-300 hover:-translate-y-1">
+                            <img src="https://i.ibb.co.com/27r27CQy/IMG-20260322-153159.jpg" alt="Kaur Perencanaan" class="w-16 h-16 rounded-full mb-3 border-2 border-hijau-tua object-cover">
+                            <h4 class="font-bold text-sm text-hijau-tua">Meydi Rondonuwu</h4>
+                            <p class="text-xs text-gray-500 mt-1">Kaur Perencanaan</p>
+                        </div>
+                    </div>
+
+                    <!-- Batas Kepala Jaga -->
+                    <div class="w-full max-w-4xl mt-10 mb-8 text-center relative">
+                        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                            <div class="w-full border-t-2 border-coklat-terang/50"></div>
+                        </div>
+                        <div class="relative flex justify-center">
+                            <span class="bg-coklat-muda px-4 text-xl font-bold text-hijau-tua">Kepala Jaga (Pala)</span>
+                        </div>
+                    </div>
+
+                    <!-- Grid Pala Jaga 1-6 -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-4xl">
+                        <!-- Pala Jaga 1 -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border-b-4 border-coklat-terang text-center flex flex-col items-center transition duration-300 hover:-translate-y-1">
+                            <img src="https://i.ibb.co.com/0jRHkmy9/pala-jaga-1-gebby-lendongan.jpg" alt="Pala Jaga 1" class="w-16 h-16 rounded-full mb-3 border-2 border-hijau-tua object-cover">
+                            <h4 class="font-bold text-sm text-hijau-tua">Gebby Lendongan</h4>
+                            <p class="text-xs text-gray-500 mt-1">Pala Jaga 1</p>
+                        </div>
+                        <!-- Pala Jaga 2 -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border-b-4 border-coklat-terang text-center flex flex-col items-center transition duration-300 hover:-translate-y-1">
+                            <img src="https://i.ibb.co.com/MyTx2CnK/pala-jaga-2-denly-lendo.jpg" alt="Pala Jaga 2" class="w-16 h-16 rounded-full mb-3 border-2 border-hijau-tua object-cover">
+                            <h4 class="font-bold text-sm text-hijau-tua">Denly Lendo</h4>
+                            <p class="text-xs text-gray-500 mt-1">Pala Jaga 2</p>
+                        </div>
+                        <!-- Pala Jaga 3 -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border-b-4 border-coklat-terang text-center flex flex-col items-center transition duration-300 hover:-translate-y-1">
+                            <img src="https://i.ibb.co.com/KxzFT0DH/pala-jaga-3-fianita-tuwo.jpg" alt="Pala Jaga 3" class="w-16 h-16 rounded-full mb-3 border-2 border-hijau-tua object-cover">
+                            <h4 class="font-bold text-sm text-hijau-tua">Fianita Tuwo</h4>
+                            <p class="text-xs text-gray-500 mt-1">Pala Jaga 3</p>
+                        </div>
+                        <!-- Pala Jaga 4 -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border-b-4 border-coklat-terang text-center flex flex-col items-center transition duration-300 hover:-translate-y-1">
+                            <img src="https://i.ibb.co.com/1YVqw5nZ/pala-jaga-4-rafly-kalangi.jpg" alt="Pala Jaga 4" class="w-16 h-16 rounded-full mb-3 border-2 border-hijau-tua object-cover">
+                            <h4 class="font-bold text-sm text-hijau-tua">Rafly Kalangi</h4>
+                            <p class="text-xs text-gray-500 mt-1">Pala Jaga 4</p>
+                        </div>
+                        <!-- Pala Jaga 5 -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border-b-4 border-coklat-terang text-center flex flex-col items-center transition duration-300 hover:-translate-y-1">
+                            <img src="https://i.ibb.co.com/XrxfbKGS/pala-jaga-5-lerry-runtunuwu.jpg" alt="Pala Jaga 5" class="w-16 h-16 rounded-full mb-3 border-2 border-hijau-tua object-cover">
+                            <h4 class="font-bold text-sm text-hijau-tua">Ely Lery Runtunuwu</h4>
+                            <p class="text-xs text-gray-500 mt-1">Pala Jaga 5</p>
+                        </div>
+                        <!-- Pala Jaga 6 -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border-b-4 border-coklat-terang text-center flex flex-col items-center transition duration-300 hover:-translate-y-1">
+                            <!-- Masukkan link gambar Pala Jaga 6 di src="" di bawah ini -->
+                            <img src="https://i.ibb.co.com/0y8LKJ4K/Whats-App-Image-2026-03-17-at-15-15-46.jpg" alt="Pala Jaga 6" class="w-16 h-16 rounded-full mb-3 border-2 border-hijau-tua object-cover">
+                            <h4 class="font-bold text-sm text-hijau-tua">Meyni Ompi</h4>
+                            <p class="text-xs text-gray-500 mt-1">Pala Jaga 6</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Riwayat Hukum Tua -->
+            <div>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-hijau-tua mb-4">Riwayat Hukum Tua</h2>
+                    <div class="w-24 h-1 bg-coklat-terang mx-auto rounded"></div>
+                    <p class="mt-4 text-gray-600">Daftar pemimpin Desa Toyopon dari masa ke masa.</p>
+                </div>
+
+                <div class="max-w-3xl mx-auto relative border-l-4 border-hijau-tua py-4 pl-6 md:pl-10 ml-4 md:ml-auto">
+                    <!-- Item 1 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-coklat-terang rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-coklat-terang bg-hijau-gelap px-3 py-1 rounded-full">2022 - Sekarang</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Wenny Tumuju</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Hukum Tua</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-hijau-tua rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-hijau-tua bg-coklat-terang px-3 py-1 rounded-full">2021 - 2022</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Eike G. Umboh, S.Pd</h3>
+                            <p class="text-gray-600 mt-2 text-sm">PNJ Hukum Tua</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-hijau-tua rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-hijau-tua bg-coklat-terang px-3 py-1 rounded-full">2018 - 2021</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Romy Rondonuwu, S.E</h3>
+                            <p class="text-gray-600 mt-2 text-sm">PNJ Hukum Tua</p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-coklat-terang rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-coklat-terang bg-hijau-gelap px-3 py-1 rounded-full">2018 - 2018</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Jerry F. Sengkey</h3>
+                            <p class="text-gray-600 mt-2 text-sm">PLH Hukum Tua</p>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-hijau-tua rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-hijau-tua bg-coklat-terang px-3 py-1 rounded-full">2013 - 2018</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Jantje Rindorindo</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Hukum Tua IX</p>
+                        </div>
+                    </div>
+                    <!-- Item 6 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-coklat-terang rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-coklat-terang bg-hijau-gelap px-3 py-1 rounded-full">2008 - 2013</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Jandri Rompas</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Hukum Tua VIII</p>
+                        </div>
+                    </div>
+                    <!-- Item 7 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-hijau-tua rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-hijau-tua bg-coklat-terang px-3 py-1 rounded-full">2002 - 2008</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Heni Tarek</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Hukum Tua VII</p>
+                        </div>
+                    </div>
+                    <!-- Item 8 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-coklat-terang rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-coklat-terang bg-hijau-gelap px-3 py-1 rounded-full">1996 - 2002</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Syul Karuh</h3>
+                            <p class="text-gray-600 mt-2 text-sm">PNJ Hukum Tua</p>
+                        </div>
+                    </div>
+                    <!-- Item 9 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-hijau-tua rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-hijau-tua bg-coklat-terang px-3 py-1 rounded-full">1994 - 1996</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Riko Paat</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Hukum Tua VI</p>
+                        </div>
+                    </div>
+                    <!-- Item 10 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-coklat-terang rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-coklat-terang bg-hijau-gelap px-3 py-1 rounded-full">1988 - 1994</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Max B Tumuju</h3>
+                            <p class="text-gray-600 mt-2 text-sm">PNJ Hukum Tua</p>
+                        </div>
+                    </div>
+                    <!-- Item 11 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-hijau-tua rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-hijau-tua bg-coklat-terang px-3 py-1 rounded-full">1985 - 1988</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Semuel Siwu</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Hukum Tua V</p>
+                        </div>
+                    </div>
+                    <!-- Item 12 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-coklat-terang rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-coklat-terang bg-hijau-gelap px-3 py-1 rounded-full">1985 - 1985</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Wem Tumuju</h3>
+                            <p class="text-gray-600 mt-2 text-sm">PLH Hukum Tua</p>
+                        </div>
+                    </div>
+                    <!-- Item 13 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-hijau-tua rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-hijau-tua bg-coklat-terang px-3 py-1 rounded-full">1977 - 1985</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Janer Rompas</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Hukum Tua IV</p>
+                        </div>
+                    </div>
+                    <!-- Item 14 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-coklat-terang rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-coklat-terang bg-hijau-gelap px-3 py-1 rounded-full">1969 - 1977</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Jan Kaligis</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Hukum Tua III</p>
+                        </div>
+                    </div>
+                    <!-- Item 15 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-hijau-tua rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-hijau-tua bg-coklat-terang px-3 py-1 rounded-full">1952 - 1969</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Jan C. Rindorindo</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Hukum Tua II</p>
+                        </div>
+                    </div>
+                    <!-- Item 16 -->
+                    <div class="mb-10 relative">
+                        <div class="absolute w-6 h-6 bg-coklat-terang rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-coklat-terang bg-hijau-gelap px-3 py-1 rounded-full">1949 - 1952</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">Julius Rambi</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Hukum Tua I</p>
+                        </div>
+                    </div>
+                    <!-- Item 17 -->
+                    <div class="relative">
+                        <div class="absolute w-6 h-6 bg-hijau-tua rounded-full -left-[38px] md:-left-[54px] border-4 border-coklat-muda"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition">
+                            <span class="text-sm font-bold text-hijau-tua bg-coklat-terang px-3 py-1 rounded-full">1932 - 1949</span>
+                            <h3 class="text-xl font-bold text-hijau-tua mt-3">TONAAS</h3>
+                            <p class="text-gray-600 mt-2 text-sm">TONAAS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Galeri Section -->
+    <section id="galeri" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-hijau-tua mb-4">Galeri</h2>
+                <div class="w-24 h-1 bg-coklat-terang mx-auto rounded"></div>
+                <p class="mt-4 text-gray-600">Potret kegiatan dan pemandangan di Desa Toyopon.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="overflow-hidden rounded-xl h-64 shadow-md group">
+                    <img src="dsni truh trg pe foto foto selama KKT di desa" alt="Galeri 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl h-64 shadow-md group">
+                    <img src="dsni truh trg pe foto foto selama KKT di desa" alt="Galeri 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl h-64 shadow-md group">
+                    <img src="dsni truh trg pe foto foto selama KKT di desa" alt="Galeri 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl h-64 shadow-md group">
+                    <img src="dsni truh trg pe foto foto selama KKT di desa" alt="Galeri 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl h-64 shadow-md group">
+                    <img src="dsni truh trg pe foto foto selama KKT di desa" alt="Galeri 5" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl h-64 shadow-md group">
+                    <img src="dsni truh trg pe foto foto selama KKT di desa" alt="Galeri 6" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak & Lokasi Section -->
+    <section id="kontak" class="py-20 bg-coklat-muda">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-hijau-tua mb-4">Kontak & Lokasi</h2>
+                <div class="w-24 h-1 bg-coklat-terang mx-auto rounded"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Info Kontak -->
+                <div class="lg:w-1/3 bg-white p-8 rounded-2xl shadow-lg border-t-4 border-hijau-tua">
+                    <h3 class="text-xl font-bold text-hijau-tua mb-6">Hubungi Kami</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-coklat-terang rounded-full flex items-center justify-center text-hijau-gelap mt-1">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-sm font-semibold text-gray-500">Alamat Kantor</h4>
+                                <p class="text-gray-800">Jl. Utama Desa Toyopon, Jaga I,<br>Kecamatan/Kabupaten,<br>Sulawesi Utara, 95956</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-coklat-terang rounded-full flex items-center justify-center text-hijau-gelap mt-1">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-sm font-semibold text-gray-500">Telepon / WhatsApp</h4>
+                                <p class="text-gray-800">+62 852 4177 4052</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-coklat-terang rounded-full flex items-center justify-center text-hijau-gelap mt-1">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-sm font-semibold text-gray-500">Email</h4>
+                                <p class="text-gray-800">pemdes@toyopon.desa.id</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="lg:w-2/3 bg-gray-200 rounded-2xl overflow-hidden shadow-lg border-2 border-white min-h-[400px]">
+                    <!-- Placeholder Maps, bisa diganti src-nya dari Google Maps -> Share -> Embed a map -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53672.475013315365!2d124.36958989901035!3d0.9834715327352755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x327e0772bd74c615%3A0xecb4fb78beda0ca8!2sToyopon%2C%20Motoling%20Barat%2C%20South%20Minahasa%20Regency%2C%20North%20Sulawesi!5e0!3m2!1sen!2sid!4v1773193671514!5m2!1sen!2sid" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; min-height: 400px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-hijau-gelap text-white pt-12 pb-6 border-t-8 border-coklat-terang">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <h2 class="text-2xl font-bold text-coklat-terang tracking-wider mb-2">DESA TOYOPON</h2>
+                    <p class="text-gray-400 text-sm">Membangun dari desa, untuk bangsa.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <!-- Link Instagram -->
+                    <a href="https://www.instagram.com/kkt146_toyopon?igsh=bmc4d2N2YzEyb3Rt" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-hijau-tua rounded-full flex items-center justify-center hover:bg-coklat-terang hover:text-hijau-gelap transition duration-300">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <!-- Link TikTok -->
+                    <a href="https://www.tiktok.com/@kkt146.poskotoyop?_r=1&_t=ZS-94akUnhCwpL" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-hijau-tua rounded-full flex items-center justify-center hover:bg-coklat-terang hover:text-hijau-gelap transition duration-300">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-6 text-center text-sm text-gray-400">
+                <p>&copy; 2026 Pemerintah Desa Toyopon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script untuk Mobile Menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Menutup menu mobile saat link di klik
+        const menuLinks = menu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
